@@ -8,5 +8,6 @@ urlpatterns = [
     path('clone/',views.clone,name='clone'),
     path('home3/',views.home3,name='home3'),
     path('home4/',views.home4,name='home4'),
+    path('home5/',views.home4,name='home5'),
    
 ]
