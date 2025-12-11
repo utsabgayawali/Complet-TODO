@@ -67,9 +67,6 @@
     </nav>
 
     <h1 class="h1 mx-3 my-3">View Your content</h1>
-
-     {% if task%}
-        {% for item in task  %}
          <table class="table mx-3 my-3">
   <thead>
     <tr>
@@ -79,17 +76,21 @@
     </tr>
   </thead>
   <tbody>
+    
+     {% if task_item%}
+        {% for item in task_item  %}
     <tr>
       <th scope="row">1</th>
       <td>{{item.task_name}}</td>
       <td>{{item.description}}</td>
     </tr>
+       {% endfor %}
+     {% endif %}
+     
   </tbody>
 </table>
 
         
-        {% endfor %}
-     {% endif %}
      
 
 

@@ -8,4 +8,4 @@ def home(request):
 
 def task(request):
     task = Todo.objects.all()
-    return render(request,'task.html',  context={'task':task})
+    return render(request,'task.html',  context={'task_item':task})
