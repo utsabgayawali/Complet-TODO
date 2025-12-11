@@ -5,6 +5,6 @@ class Todo(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return self.task
+        return self.task_name
     
 
