@@ -5,7 +5,6 @@ from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.home,name='home'),
-    path('task/',views.task,name='task'),
-    
-   
+    path('<int:id>/task/',views.task,name='task'),
+
 ]

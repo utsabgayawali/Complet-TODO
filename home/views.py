@@ -16,6 +16,8 @@ def task(request):
     return render(request,'task.html',  context={'task_item':task})
 
 
+         
+
 def delete(request,id):
     task = get_object_or_404(Todo, id=id)
     if request.method == 'POST':

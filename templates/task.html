@@ -83,10 +83,7 @@
       <th scope="row">1</th>
       <td>{{item.task_name}}</td>
       <td>{{item.description}}</td>
-       <form method="POST">
-        {% csrf_token %}
-      <td><button type="button" class="btn btn-danger">Delete</button><td>
-        </form>
+      <td><a href="{% url 'task' item.id %}" class="btn btn-danger"></a><td>
     </tr>
        {% endfor %}
      {% endif %}
