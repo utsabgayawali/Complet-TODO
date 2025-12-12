@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from .models import Todo
 
 
@@ -14,3 +14,12 @@ def home(request):
 def task(request):
     task = Todo.objects.all()
     return render(request,'task.html',  context={'task_item':task})
+
+
+def delete(request,id):
+    task = get_object_or_404(Todo, id=id)
+    if request.method == 'POST':
+        task.delete()
+        return redirect('task')
+    else:
+        return render(request,'task.html',context={'task_item':task})
