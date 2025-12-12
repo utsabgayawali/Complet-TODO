@@ -78,13 +78,13 @@
   <tbody>
     
      {% if task_item%}
-        {% for item in task_item  %}
+        {% for item in task_item %}
     <tr>
       <th scope="row">1</th>
       <td>{{item.task_name}}</td>
       <td>{{item.description}}</td>
-      <td><a href="{% url 'task' item.id %}" class="btn btn-danger"></a><td>
-    </tr>
+      <td><a href="{% url 'delete' item.id %}" class="btn btn-danger">Delete</a><td>
+       </tr>
        {% endfor %}
      {% endif %}
      

@@ -18,10 +18,10 @@ def task(request):
 
          
 
-def delete(request,id):
-    task = get_object_or_404(Todo, id=id)
+def delete(request,task_id):
+    task = get_object_or_404(Todo, pk=task_id)
     if request.method == 'POST':
         task.delete()
         return redirect('task')
     else:
-        return render(request,'task.html',context={'task_item':task})
+        return render(request,'task.html')
