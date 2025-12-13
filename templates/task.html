@@ -83,8 +83,13 @@
       <th scope="row">1</th>
       <td>{{item.task_name}}</td>
       <td>{{item.description}}</td>
-      <td><a href="{% url 'delete' item.id %}" class="btn btn-danger">Delete</a><td>
-       </tr>
+      <td>
+        <form method = "post">
+          {% csrf_token %}
+        <a href="{% url 'delete' item.id %}" class="btn btn-danger">Delete</a>
+        </form>
+      <td>
+    </tr>
        {% endfor %}
      {% endif %}
      

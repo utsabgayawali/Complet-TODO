@@ -20,8 +20,5 @@ def task(request):
 
 def delete(request,task_id):
     task = get_object_or_404(Todo, pk=task_id)
-    if request.method == 'POST':
-        task.delete()
-        return redirect('task')
-    else:
-        return render(request,'task.html')
+    task.delete()
+    return redirect('task')
