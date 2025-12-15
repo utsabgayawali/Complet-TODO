@@ -12,9 +12,6 @@ def home(request):
         todo.save()
         messages.success(request,'Your task is added sucessfully !!')
         return redirect('home')
-    else:
-        messages.warning(request,'Please complete the details  !!')
-        return redirect('home')
         
     return render(request,'home.html')
 
