@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect,get_object_or_404
 from .models import Todo
+from django.contrib import messages
 
 
 
@@ -9,6 +10,9 @@ def home(request):
         description = request.POST.get('description')
         todo= Todo(task_name=task_name,description=description)
         todo.save()
+        messages.success(request,'Your task is added sucessfully !!')
+        return redirect('home')
+        
     return render(request,'home.html')
 
 def task(request):
