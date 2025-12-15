@@ -65,8 +65,13 @@
         </form>
       </div>
     </nav>
-
+<div class="container mx-3 my-3">
     <h1 class="h1 mx-3 my-3">View Your content</h1>
+    {% if messages %}
+     {% for message in messages %}
+       <div class="alert alert-danger" role="alert">{{message}}</div>
+     {% endfor %}
+    {% endif %}
          <table class="table mx-3 my-3">
   <thead>
     <tr>
@@ -95,6 +100,7 @@
      
   </tbody>
 </table>
+</div>
 
         
      

@@ -78,11 +78,11 @@
    {% csrf_token %}
   <div class="form-group">
     <label for="exampleInputEmail1">Enter your task </label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter task" name ="task_name">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter task" name ="task_name" Required>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">About task </label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Add task description" name="description">
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Add task description" name="description" Required>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

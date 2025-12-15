@@ -25,4 +25,5 @@ def task(request):
 def delete(request,task_id):
     task = get_object_or_404(Todo, pk=task_id)
     task.delete()
+    messages.warning(request,'Your task is deleted sucessfully !!')
     return redirect('task')
